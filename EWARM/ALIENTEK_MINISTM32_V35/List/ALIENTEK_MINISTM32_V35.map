@@ -1,0 +1,327 @@
+###############################################################################
+#
+# IAR ELF Linker V8.32.1.169/W32 for ARM                  26/Apr/2023  21:43:17
+# Copyright 2007-2018 IAR Systems AB.
+#
+#    Output file  =  
+#        D:\Work\ALIENTEK_MINISTM32_V35\ALIENTEK_MINISTM32_V35\EWARM\ALIENTEK_MINISTM32_V35\Exe\ALIENTEK_MINISTM32_V35.out
+#    Map file     =  
+#        D:\Work\ALIENTEK_MINISTM32_V35\ALIENTEK_MINISTM32_V35\EWARM\ALIENTEK_MINISTM32_V35\List\ALIENTEK_MINISTM32_V35.map
+#    Command line =  
+#        -f C:\Users\ADMINI~1\AppData\Local\Temp\EW60CF.tmp
+#        (D:\Work\ALIENTEK_MINISTM32_V35\ALIENTEK_MINISTM32_V35\EWARM\ALIENTEK_MINISTM32_V35\Obj\main.o
+#        D:\Work\ALIENTEK_MINISTM32_V35\ALIENTEK_MINISTM32_V35\EWARM\ALIENTEK_MINISTM32_V35\Obj\startup_stm32f103xe.o
+#        D:\Work\ALIENTEK_MINISTM32_V35\ALIENTEK_MINISTM32_V35\EWARM\ALIENTEK_MINISTM32_V35\Obj\stm32f1xx_hal.o
+#        D:\Work\ALIENTEK_MINISTM32_V35\ALIENTEK_MINISTM32_V35\EWARM\ALIENTEK_MINISTM32_V35\Obj\stm32f1xx_hal_cortex.o
+#        D:\Work\ALIENTEK_MINISTM32_V35\ALIENTEK_MINISTM32_V35\EWARM\ALIENTEK_MINISTM32_V35\Obj\stm32f1xx_hal_dma.o
+#        D:\Work\ALIENTEK_MINISTM32_V35\ALIENTEK_MINISTM32_V35\EWARM\ALIENTEK_MINISTM32_V35\Obj\stm32f1xx_hal_exti.o
+#        D:\Work\ALIENTEK_MINISTM32_V35\ALIENTEK_MINISTM32_V35\EWARM\ALIENTEK_MINISTM32_V35\Obj\stm32f1xx_hal_flash.o
+#        D:\Work\ALIENTEK_MINISTM32_V35\ALIENTEK_MINISTM32_V35\EWARM\ALIENTEK_MINISTM32_V35\Obj\stm32f1xx_hal_flash_ex.o
+#        D:\Work\ALIENTEK_MINISTM32_V35\ALIENTEK_MINISTM32_V35\EWARM\ALIENTEK_MINISTM32_V35\Obj\stm32f1xx_hal_gpio.o
+#        D:\Work\ALIENTEK_MINISTM32_V35\ALIENTEK_MINISTM32_V35\EWARM\ALIENTEK_MINISTM32_V35\Obj\stm32f1xx_hal_gpio_ex.o
+#        D:\Work\ALIENTEK_MINISTM32_V35\ALIENTEK_MINISTM32_V35\EWARM\ALIENTEK_MINISTM32_V35\Obj\stm32f1xx_hal_msp.o
+#        D:\Work\ALIENTEK_MINISTM32_V35\ALIENTEK_MINISTM32_V35\EWARM\ALIENTEK_MINISTM32_V35\Obj\stm32f1xx_hal_pwr.o
+#        D:\Work\ALIENTEK_MINISTM32_V35\ALIENTEK_MINISTM32_V35\EWARM\ALIENTEK_MINISTM32_V35\Obj\stm32f1xx_hal_rcc.o
+#        D:\Work\ALIENTEK_MINISTM32_V35\ALIENTEK_MINISTM32_V35\EWARM\ALIENTEK_MINISTM32_V35\Obj\stm32f1xx_hal_rcc_ex.o
+#        D:\Work\ALIENTEK_MINISTM32_V35\ALIENTEK_MINISTM32_V35\EWARM\ALIENTEK_MINISTM32_V35\Obj\stm32f1xx_hal_tim.o
+#        D:\Work\ALIENTEK_MINISTM32_V35\ALIENTEK_MINISTM32_V35\EWARM\ALIENTEK_MINISTM32_V35\Obj\stm32f1xx_hal_tim_ex.o
+#        D:\Work\ALIENTEK_MINISTM32_V35\ALIENTEK_MINISTM32_V35\EWARM\ALIENTEK_MINISTM32_V35\Obj\stm32f1xx_it.o
+#        D:\Work\ALIENTEK_MINISTM32_V35\ALIENTEK_MINISTM32_V35\EWARM\ALIENTEK_MINISTM32_V35\Obj\system_stm32f1xx.o
+#        --redirect _Printf=_PrintfFull --redirect _Scanf=_ScanfFull
+#        --no_out_extension -o
+#        D:\Work\ALIENTEK_MINISTM32_V35\ALIENTEK_MINISTM32_V35\EWARM\ALIENTEK_MINISTM32_V35\Exe\ALIENTEK_MINISTM32_V35.out
+#        --map
+#        D:\Work\ALIENTEK_MINISTM32_V35\ALIENTEK_MINISTM32_V35\EWARM\ALIENTEK_MINISTM32_V35\List\ALIENTEK_MINISTM32_V35.map
+#        --config
+#        D:\Work\ALIENTEK_MINISTM32_V35\ALIENTEK_MINISTM32_V35\EWARM/stm32f103xe_flash.icf
+#        --semihosting --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x807'ffff] { ro };
+define block CSTACK with size = 1K, alignment = 8 { };
+define block HEAP with size = 512, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'ffff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind         Address   Size  Object
+  -------            ----         -------   ----  ------
+"A0":                                      0x130
+  .intvec            ro code   0x800'0000  0x130  startup_stm32f103xe.o [1]
+                             - 0x800'0130  0x130
+
+"P1":                                      0xb10
+  .text              ro code   0x800'0130  0x4a2  stm32f1xx_hal_rcc.o [1]
+  .text              ro code   0x800'05d4    0xc  stm32f1xx_hal.o [1]
+  .text              ro code   0x800'05e0   0x40  stm32f1xx_hal.o [1]
+  .text              ro code   0x800'0620   0xac  stm32f1xx_hal_cortex.o [1]
+  .text              ro code   0x800'06cc  0x1d8  stm32f1xx_hal_gpio.o [1]
+  .text              ro code   0x800'08a4   0xf2  main.o [1]
+  .text              ro code   0x800'0998   0x24  stm32f1xx_hal.o [1]
+  .text              ro code   0x800'09bc    0x6  ABImemclr4.o [3]
+  .text              ro code   0x800'09c4   0x44  stm32f1xx_hal_msp.o [1]
+  .text              ro code   0x800'0a08   0x32  ABImemset48.o [3]
+  .text              ro code   0x800'0a3a   0x2c  copy_init3.o [3]
+  .text              ro code   0x800'0a68   0x28  data_init.o [3]
+  .iar.init_table    const     0x800'0a90   0x14  - Linker created -
+  .text              ro code   0x800'0aa4   0x1e  cmain.o [3]
+  .text              ro code   0x800'0ac2    0x4  low_level_init.o [2]
+  .text              ro code   0x800'0ac6    0x4  exit.o [2]
+  .text              ro code   0x800'0acc    0xa  cexit.o [3]
+  .text              ro code   0x800'0ad8   0x14  exit.o [4]
+  .text              ro code   0x800'0aec   0x14  stm32f1xx_it.o [1]
+  .text              ro code   0x800'0b00   0x10  stm32f1xx_hal.o [1]
+  .text              ro code   0x800'0b10   0x14  system_stm32f1xx.o [1]
+  .text              ro code   0x800'0b24   0x10  startup_stm32f103xe.o [1]
+  Initializer bytes  const     0x800'0b34   0x10  <for P2-1>
+  .text              ro code   0x800'0b44    0xc  cstartup_M.o [3]
+  .text              ro code   0x800'0b50    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0b54    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0b58    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0b5c    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0b60    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0b64    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0b68    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0b6c    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0b70    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0b74    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0b78    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0b7c    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0b80    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0b84    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0b88    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0b8c    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0b90    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0b94    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0b98    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0b9c    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0ba0    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0ba4    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0ba8    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0bac    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0bb0    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0bb4    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0bb8    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0bbc    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0bc0    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0bc4    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0bc8    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0bcc    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0bd0    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0bd4    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0bd8    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0bdc    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0be0    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0be4    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0be8    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0bec    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0bf0    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0bf4    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0bf8    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0bfc    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0c00    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0c04    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0c08    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0c0c    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0c10    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0c14    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0c18    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0c1c    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0c20    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0c24    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0c28    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0c2c    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0c30    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0c34    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0c38    0x4  startup_stm32f103xe.o [1]
+  .text              ro code   0x800'0c3c    0x4  startup_stm32f103xe.o [1]
+  .rodata            const     0x800'0c40    0x0  copy_init3.o [3]
+                             - 0x800'0c40  0xb10
+
+"P2", part 1 of 2:                          0x10
+  P2-1                        0x2000'0000   0x10  <Init block>
+    .data            inited   0x2000'0000    0xc  stm32f1xx_hal.o [1]
+    .data            inited   0x2000'000c    0x4  system_stm32f1xx.o [1]
+                            - 0x2000'0010   0x10
+
+"P2", part 2 of 2:                         0x400
+  CSTACK                      0x2000'0010  0x400  <Block>
+    CSTACK           uninit   0x2000'0010  0x400  <Block tail>
+                            - 0x2000'0410  0x400
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+   0x800'0c40   0x807'ffff  0x7'f3c0
+  0x2000'0410  0x2000'ffff    0xfbf0
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Copy (__iar_copy_init3)
+    1 source range, total size 0x10:
+           0x800'0b34  0x10
+    1 destination range, total size 0x10:
+          0x2000'0000  0x10
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
+command line/config:
+    -------------------------------------------------
+    Total:
+
+D:\Work\ALIENTEK_MINISTM32_V35\ALIENTEK_MINISTM32_V35\EWARM\ALIENTEK_MINISTM32_V35\Obj: [1]
+    main.o                      242
+    startup_stm32f103xe.o       560
+    stm32f1xx_hal.o             128       12       12
+    stm32f1xx_hal_cortex.o      172
+    stm32f1xx_hal_gpio.o        472
+    stm32f1xx_hal_msp.o          68
+    stm32f1xx_hal_rcc.o       1 186
+    stm32f1xx_it.o               20
+    system_stm32f1xx.o           20        4        4
+    -------------------------------------------------
+    Total:                    2 868       16       16
+
+dl7M_tln.a: [2]
+    exit.o                        4
+    low_level_init.o              4
+    -------------------------------------------------
+    Total:                        8
+
+rt7M_tl.a: [3]
+    ABImemclr4.o                  6
+    ABImemset48.o                50
+    cexit.o                      10
+    cmain.o                      30
+    copy_init3.o                 44
+    cstartup_M.o                 12
+    data_init.o                  40
+    -------------------------------------------------
+    Total:                      192
+
+shb_l.a: [4]
+    exit.o                       20
+    -------------------------------------------------
+    Total:                       20
+
+    Gaps                         12
+    Linker created                        20    1 024
+-----------------------------------------------------
+    Grand Total:              3 100       36    1 040
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base    0x800'0a90          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'0aa4          --   Gb  - Linker created -
+?main                    0x800'0aa5         Code  Gb  cmain.o [3]
+AHBPrescTable            0x800'0b14   0x10  Data  Gb  system_stm32f1xx.o [1]
+BusFault_Handler         0x800'0af3    0x2  Code  Gb  stm32f1xx_it.o [1]
+CSTACK$$Base            0x2000'0010          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0410          --   Gb  - Linker created -
+DebugMon_Handler         0x800'0af9    0x2  Code  Gb  stm32f1xx_it.o [1]
+Error_Handler            0x800'0993    0x4  Code  Gb  main.o [1]
+HAL_GPIO_Init            0x800'06cd  0x194  Code  Gb  stm32f1xx_hal_gpio.o [1]
+HAL_GPIO_WritePin        0x800'0861    0x8  Code  Gb  stm32f1xx_hal_gpio.o [1]
+HAL_GetTick              0x800'05d5    0xc  Code  Wk  stm32f1xx_hal.o [1]
+HAL_IncTick              0x800'0b01   0x10  Code  Wk  stm32f1xx_hal.o [1]
+HAL_Init                 0x800'0999   0x20  Code  Gb  stm32f1xx_hal.o [1]
+HAL_InitTick             0x800'05e1   0x40  Code  Wk  stm32f1xx_hal.o [1]
+HAL_MspInit              0x800'09c5   0x44  Code  Gb  stm32f1xx_hal_msp.o [1]
+HAL_NVIC_SetPriority     0x800'0655   0x3a  Code  Gb  stm32f1xx_hal_cortex.o [1]
+HAL_NVIC_SetPriorityGrouping
+                         0x800'063b   0x1a  Code  Gb  stm32f1xx_hal_cortex.o [1]
+HAL_RCC_ClockConfig      0x800'0451   0xf4  Code  Gb  stm32f1xx_hal_rcc.o [1]
+HAL_RCC_GetSysClockFreq
+                         0x800'0559   0x3a  Code  Gb  stm32f1xx_hal_rcc.o [1]
+HAL_RCC_GetSysClockFreq::aPLLMULFactorTable
+                         0x800'05c0   0x10  Data  Lc  stm32f1xx_hal_rcc.o [1]
+HAL_RCC_GetSysClockFreq::aPredivFactorTable
+                         0x800'05d0    0x2  Data  Lc  stm32f1xx_hal_rcc.o [1]
+HAL_RCC_OscConfig        0x800'0131  0x318  Code  Gb  stm32f1xx_hal_rcc.o [1]
+HAL_SYSTICK_Config       0x800'068f   0x28  Code  Gb  stm32f1xx_hal_cortex.o [1]
+HardFault_Handler        0x800'0aef    0x2  Code  Gb  stm32f1xx_it.o [1]
+MemManage_Handler        0x800'0af1    0x2  Code  Gb  stm32f1xx_it.o [1]
+NMI_Handler              0x800'0aed    0x2  Code  Gb  stm32f1xx_it.o [1]
+PendSV_Handler           0x800'0afb    0x2  Code  Gb  stm32f1xx_it.o [1]
+Region$$Table$$Base      0x800'0a90          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'0aa4          --   Gb  - Linker created -
+SVC_Handler              0x800'0af7    0x2  Code  Gb  stm32f1xx_it.o [1]
+SysTick_Handler          0x800'0afd    0x4  Code  Gb  stm32f1xx_it.o [1]
+SystemClock_Config       0x800'0931   0x62  Code  Gb  main.o [1]
+SystemCoreClock         0x2000'000c    0x4  Data  Gb  system_stm32f1xx.o [1]
+SystemInit               0x800'0b11    0x2  Code  Gb  system_stm32f1xx.o [1]
+UsageFault_Handler       0x800'0af5    0x2  Code  Gb  stm32f1xx_it.o [1]
+__NVIC_SetPriority       0x800'0621   0x1a  Code  Lc  stm32f1xx_hal_cortex.o [1]
+__aeabi_memclr4          0x800'09bd         Code  Gb  ABImemclr4.o [3]
+__cmain                  0x800'0aa5         Code  Gb  cmain.o [3]
+__exit                   0x800'0ad9   0x14  Code  Gb  exit.o [4]
+__iar_Memset4_word       0x800'0a09         Code  Gb  ABImemset48.o [3]
+__iar_Memset8_word       0x800'0a09         Code  Gb  ABImemset48.o [3]
+__iar_copy_init3         0x800'0a3b   0x2c  Code  Gb  copy_init3.o [3]
+__iar_data_init3         0x800'0a69   0x28  Code  Gb  data_init.o [3]
+__iar_program_start      0x800'0b45         Code  Gb  cstartup_M.o [3]
+__low_level_init         0x800'0ac3    0x4  Code  Gb  low_level_init.o [2]
+__vector_table           0x800'0000         Data  Gb  startup_stm32f103xe.o [1]
+_call_main               0x800'0ab1         Code  Gb  cmain.o [3]
+_exit                    0x800'0acd         Code  Gb  cexit.o [3]
+_main                    0x800'0abf         Code  Gb  cmain.o [3]
+exit                     0x800'0ac7    0x4  Code  Gb  exit.o [2]
+main                     0x800'08a5   0x84  Code  Gb  main.o [1]
+uwTick                  0x2000'0004    0x4  Data  Gb  stm32f1xx_hal.o [1]
+uwTickFreq              0x2000'0000    0x1  Data  Gb  stm32f1xx_hal.o [1]
+uwTickPrio              0x2000'0008    0x4  Data  Gb  stm32f1xx_hal.o [1]
+
+
+[1] = D:\Work\ALIENTEK_MINISTM32_V35\ALIENTEK_MINISTM32_V35\EWARM\ALIENTEK_MINISTM32_V35\Obj
+[2] = dl7M_tln.a
+[3] = rt7M_tl.a
+[4] = shb_l.a
+
+  3 100 bytes of readonly  code memory
+     36 bytes of readonly  data memory
+  1 040 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,15 @@
+"D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\arm\bin\armproc.dll" 
+
+"D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\arm\bin\armstlink2.dll" 
+
+"D:\Work\ALIENTEK_MINISTM32_V35\ALIENTEK_MINISTM32_V35\EWARM\ALIENTEK_MINISTM32_V35\Exe\ALIENTEK_MINISTM32_V35.out" 
+
+--plugin="D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\arm\bin\armbat.dll" 
+
+--device_macro="D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\arm\config\debugger\ST\STM32F1xx.dmac" 
+
+--flash_loader="D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\arm\config\flashloader\ST\FlashSTM32F10xxC.board" 
+
+
+
+
